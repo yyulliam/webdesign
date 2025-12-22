@@ -1,1 +1,1 @@
-https://yyulliam.github.io/web-design/WD/котики_мяу.html
+https://yyulliam.github.io/web-design/WD/5 лаба
