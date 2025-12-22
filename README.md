@@ -1,1 +1,1 @@
-https://yyulliam.github.io/web-design/WD/mersedes/gh
+https://yyulliam.github.io/webdesign/WD/mersedes/gh
