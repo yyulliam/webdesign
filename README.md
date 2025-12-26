@@ -4,3 +4,4 @@ https://yyulliam.github.io/webdesign/WD/2-3/2-3основа
 https://yyulliam.github.io/webdesign/WD/2-3/mersedes/2-3лаба   
 https://yyulliam.github.io/webdesign/WD/4/4основа    
 https://yyulliam.github.io/webdesign/WD/5/5_лаба    
+https://yyulliam.github.io/webdesign/WD/6/6_лаба     
