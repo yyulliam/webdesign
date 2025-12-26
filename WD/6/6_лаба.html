@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сложный пример CSS Grid</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Контейнер сетки */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 150px; 
+            grid-template-rows: 100px 100px 150px 80px; 
+            grid-gap: 10px;
+            width: 90%;
+            max-width: 1200px;
+            grid-template-areas:
+                "wide full ."      
+                "bottom bottom ."   
+                "big . ."  
+                ". . ."         
+                ". . footer";       
+        }
+
+        /* Цветные элементы сетки с именованными областями */
+        .item1 { grid-area: wide; background-color: #92e19e; }
+        .item2 { display: none; } /* Воковая панель - скрыта */
+        .item3 { 
+            grid-area: big; 
+            background-color: #ff8bf1; 
+            /* Делаем квадратным - высота уже задана в grid-template-rows (150px) */
+            width: 250px; /* Делаем ширину равной высоте для квадрата */
+            height: 250px;
+            justify-self: start; /* Выравнивание по левому краю */
+        }
+        .item4 { 
+            grid-area: footer; 
+            background-color: #4D96FF; 
+            /* Маленький прямоугольник */
+            width: 150px;
+            height: 50px;
+            justify-self: end; /* Выравнивание по правому краю */
+        }
+        .item5 { grid-area: bottom; background-color: #ff8b0e; }
+        .item6 { grid-area: full; background-color: #fffc37; }
+        .item7 { display: none; } 
+        .item8 { display: none; } 
+
+        /* Оформление элементов сетки */
+        .grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1">Широкий блок</div>
+        <div class="grid-item item2">Воковая панель</div>
+        <div class="grid-item item3">Большой блок</div>
+        <div class="grid-item item4">Футер</div>
+        <div class="grid-item item5">Нижний блок</div>
+        <div class="grid-item item6">Во всю ширину</div>
+        <div class="grid-item item7">Заголовок</div>
+        <div class="grid-item item8">Контент</div>
+    </div>
+</body>
+</html>
