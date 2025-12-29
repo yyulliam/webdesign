@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаб. работа №7 - Вариант 9</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #f8f9fa;
+        }
+        
+        h1, h2 {
+            color: #333;
+        }
+        
+        .function {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        code {
+            background: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #45a049;
+        }
+        
+        .result {
+            background: #e8f5e8;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .even-numbers {
+            color: #2196F3;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Лабораторная работа №7 - Вариант 9</h1>
+    
+    <div class="function">
+        <h3>1. isNegative(num) - Проверка отрицательного числа</h3>
+        <code>function isNegative(num) { return num < 0; }</code><br>
+        <button onclick="test1()">Тест: isNegative(-5) и isNegative(10)</button>
+        <div id="result1" class="result"></div>
+    </div>
+    
+    <div class="function">
+        <h3>2. trimSpaces(str) - Удаление пробелов</h3>
+        <code>function trimSpaces(str) { return str.trim(); }</code><br>
+        <button onclick="test2()">Тест: trimSpaces('  hello  ')</button>
+        <div id="result2" class="result"></div>
+    </div>
+    
+    <div class="function">
+        <h3>3. andNot(a, b) - Логическое "И НЕ"</h3>
+        <code>function andNot(a, b) { return !(a && b); }</code><br>
+        <button onclick="test3()">Тест: andNot(true, false)</button>
+        <div id="result3" class="result"></div>
+    </div>
+    
+    <div class="function">
+        <h3>4. isValueEqual(obj, key, value) - Проверка свойства объекта</h3>
+        <code>function isValueEqual(obj, key, value) { return obj[key] === value; }</code><br>
+        <button onclick="test4()">Тест: проверка объекта {name: 'John', age: 25}</button>
+        <div id="result4" class="result"></div>
+    </div>
+    
+    <div class="function">
+        <h3>5. contains(array, element) - Проверка элемента в массиве</h3>
+        <code>function contains(array, element) { return array.includes(element); }</code><br>
+        <button onclick="test5()">Тест: contains([1,2,3], 2)</button>
+        <div id="result5" class="result"></div>
+    </div>
+    
+    <div class="function">
+        <h3>6. logEven(array) - Вывод четных чисел</h3>
+        <code>function logEven(array) { 
+    array.forEach(num => { 
+        if (num % 2 === 0) console.log(num); 
+    }); 
+}</code><br>
+        <button onclick="test6()">Тест: logEven([1,2,3,4,5])</button>
+        <div id="result6" class="result"></div>
+    </div>
+    
+    <div class="function">
+        <h3>7. squareNumbers(array) - Квадраты чисел</h3>
+        <code>function squareNumbers(array) { 
+    return array.map(num => num * num); 
+}</code><br>
+        <button onclick="test7()">Тест: squareNumbers([1,2,3,4])</button>
+        <div id="result7" class="result"></div>
+    </div>
+    
+    <button onclick="testAll()" style="background: #2196F3; padding: 12px 20px; margin-top: 20px;">
+        Протестировать ВСЕ функции
+    </button>
+
+    <script>
+        // =========== ФУНКЦИИ 9 ВАРИАНТА ===========
+        
+        function isNegative(num) {
+            return num < 0;
+        }
+        
+        function trimSpaces(str) {
+            return str.trim();
+        }
+        
+        function andNot(a, b) {
+            return !(a && b);
+        }
+        
+        function isValueEqual(obj, key, value) {
+            return obj[key] === value;
+        }
+        
+        function contains(array, element) {
+            return array.includes(element);
+        }
+        
+        function logEven(array) {
+            let evenNumbers = [];
+            array.forEach(num => {
+                if (num % 2 === 0) {
+                    console.log(num);
+                    evenNumbers.push(num);
+                }
+            });
+            return evenNumbers;
+        }
+        
+        function squareNumbers(array) {
+            return array.map(num => num * num);
+        }
+        
+        // =========== ТЕСТИРОВАНИЕ ===========
+        
+        function test1() {
+            const result1 = isNegative(-5);
+            const result2 = isNegative(10);
+            document.getElementById('result1').innerHTML = 
+                `isNegative(-5) = ${result1}<br>isNegative(10) = ${result2}`;
+            console.log('isNegative(-5):', result1);
+            console.log('isNegative(10):', result2);
+        }
+        
+        function test2() {
+            const result = trimSpaces('  hello  ');
+            document.getElementById('result2').innerHTML = 
+                `trimSpaces('  hello  ') = '${result}'`;
+            console.log("trimSpaces('  hello  '):", result);
+        }
+        
+        function test3() {
+            const result = andNot(true, false);
+            document.getElementById('result3').innerHTML = 
+                `andNot(true, false) = ${result}`;
+            console.log('andNot(true, false):', result);
+        }
+        
+        function test4() {
+            const person = {name: 'John', age: 25};
+            const result1 = isValueEqual(person, 'name', 'John');
+            const result2 = isValueEqual(person, 'age', 30);
+            document.getElementById('result4').innerHTML = 
+                `isValueEqual({name:'John',age:25}, 'name', 'John') = ${result1}<br>
+                 isValueEqual({name:'John',age:25}, 'age', 30) = ${result2}`;
+            console.log('isValueEqual tests:', result1, result2);
+        }
+        
+        function test5() {
+            const result1 = contains([1,2,3], 2);
+            const result2 = contains([1,2,3], 5);
+            document.getElementById('result5').innerHTML = 
+                `contains([1,2,3], 2) = ${result1}<br>
+                 contains([1,2,3], 5) = ${result2}`;
+            console.log('contains tests:', result1, result2);
+        }
+        
+        function test6() {
+            const evenNumbers = logEven([1,2,3,4,5]);
+            document.getElementById('result6').innerHTML = 
+                `Четные числа из [1,2,3,4,5]: <span class="even-numbers">${evenNumbers.join(', ')}</span><br>
+                 (Также выведено в консоль)`;
+            console.log('Четные числа из [1,2,3,4,5]:', evenNumbers);
+        }
+        
+        function test7() {
+            const result = squareNumbers([1,2,3,4]);
+            document.getElementById('result7').innerHTML = 
+                `squareNumbers([1,2,3,4]) = [${result.join(', ')}]`;
+            console.log('squareNumbers([1,2,3,4]):', result);
+        }
+        
+        function testAll() {
+            console.log('=== Тестирование всех функций ===');
+            test1();
+            test2();
+            test3();
+            test4();
+            test5();
+            test6();
+            test7();
+            console.log('=== Все функции протестированы ===');
+            
+            // Общий результат на странице
+            document.querySelectorAll('.result').forEach(el => {
+                el.style.display = 'block';
+            });
+            
+            alert('Все функции протестированы! Результаты на странице и в консоли (F12).');
+        }
+    </script>
+</body>
+</html>
