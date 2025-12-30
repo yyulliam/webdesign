@@ -8,3 +8,4 @@ https://yyulliam.github.io/webdesign/WD/6/6_лаба
 https://yyulliam.github.io/webdesign/WD/7/7_лаба     
 https://yyulliam.github.io/webdesign/WD/8/8_лаба     
 https://yyulliam.github.io/webdesign/WD/9/9_лаба     
+https://yyulliam.github.io/webdesign/WD/визитка/визитка     
