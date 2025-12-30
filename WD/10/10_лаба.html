@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаб. работа №10 - jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="mainTitle"><i class="fas fa-code"></i> Лабораторная работа №10</h1>
+            <h2>Работа с библиотекой jQuery</h2>
+        </header>
+
+        <!-- ЗАДАНИЕ 1 -->
+        <section class="task-section">
+            <h3><i class="fas fa-list-check"></i> Задание 1: Основы селекторов и манипуляций</h3>
+            <p><strong>Требования:</strong> При нажатии на кнопку:</p>
+            <ol class="task-instructions">
+                <li>Изменить текст заголовка страницы</li>
+                <li>Покрасить все четные элементы списка в серый цвет, а нечетные — в белый</li>
+                <li>Добавить в конец списка новый пункт «Изучить jQuery»</li>
+            </ol>
+            
+            <div class="demo-box">
+                <h4>Список дел:</h4>
+                <ul id="todoList">
+                    <li>Прочитать учебник по JavaScript</li>
+                    <li>Выполнить лабораторную работу №9</li>
+                    <li>Повторить материал по DOM</li>
+                    <li>Подготовиться к экзамену</li>
+                    <li>Написать курсовой проект</li>
+                </ul>
+                
+                <button id="jqueryActionBtn" class="btn-primary">
+                    <i class="fas fa-magic"></i> Выполнить задания
+                </button>
+            </div>
+        </section>
+
+        <!-- ЗАДАНИЕ 2 -->
+        <section class="task-section">
+            <h3><i class="fas fa-edit"></i> Задание 2: Работа с событиями и формами</h3>
+            <p><strong>Требования:</strong></p>
+            <ol class="task-instructions">
+                <li>Если поле «Имя» пустое при потере фокуса (blur), подсветить его красной рамкой</li>
+                <li>При нажатии на кнопку «Отправить» вывести приветствие в отдельный div без перезагрузки страницы</li>
+            </ol>
+            
+            <div class="demo-box">
+                <form id="userForm">
+                    <div class="form-group">
+                        <label for="userName"><i class="fas fa-user"></i> Имя:</label>
+                        <input type="text" id="userName" name="userName" placeholder="Введите ваше имя">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="userPassword"><i class="fas fa-lock"></i> Пароль:</label>
+                        <input type="password" id="userPassword" name="userPassword" placeholder="Введите пароль">
+                    </div>
+                    
+                    <button type="submit" id="submitBtn" class="btn-success">
+                        <i class="fas fa-paper-plane"></i> Отправить
+                    </button>
+                    
+                    <button type="button" id="resetFormBtn" class="btn-secondary">
+                        <i class="fas fa-redo"></i> Сбросить форму
+                    </button>
+                </form>
+                
+                <div id="greetingMessage" class="message-box"></div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Лабораторная работа №10 - Работа с jQuery | jQuery 3.6.4</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
