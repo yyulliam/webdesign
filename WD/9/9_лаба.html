@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаб. работа №9 - Асинхронность в JS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-bolt"></i> Лабораторная работа №9</h1>
+        <h2>Асинхронный JavaScript</h2>
+        
+        <div class="section">
+            <h3><i class="fas fa-tasks"></i> Часть 1: Имитация асинхронных задач</h3>
+            <p>Напишите три асинхронные функции, каждая из которых имитирует выполнение задачи. Запустите их поочередно с использованием await.</p>
+            <div class="task-buttons">
+                <button id="runTasksBtn">Запустить 3 задачи поочередно</button>
+                <div id="tasksOutput" class="output"></div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3><i class="fas fa-database"></i> Часть 2: Загрузка постов с API</h3>
+            <p>Используйте fetch для получения данных с JSONPlaceholder API. Отобразите заголовки постов.</p>
+            <div class="task-buttons">
+                <button id="loadPostsBtn">Загрузить посты</button>
+                <div id="postsOutput" class="output"></div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3><i class="fas fa-money-bill-wave"></i> Часть 3: Курс валют</h3>
+            <p>Используйте fetch для получения данных о текущем курсе валют с Belarusbank API.</p>
+            <div class="task-buttons">
+                <button id="loadCurrencyBtn">Получить курс валют</button>
+                <div id="currencyOutput" class="output"></div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3><i class="fas fa-code"></i> Консоль разработчика</h3>
+            <p><i class="fas fa-info-circle"></i> Откройте консоль (F12 → Console) для просмотра результатов выполнения асинхронных функций.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
